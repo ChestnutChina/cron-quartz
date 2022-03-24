@@ -4,6 +4,8 @@
 	"description": "generator quartz cron expressions",
 	"main": "index.js",
 	"scripts": {
+		"test": "jest --watch",
+    "coverage": "jest --coverage",
 		"lint": "eslint . --ext .js",
 		"release": "release-it",
 		"changelog": "conventional-changelog -p chestnut -i CHANGELOG.md -s -r 0"
@@ -20,10 +22,13 @@
 	"author": "bnuephjx",
 	"license": "MIT",
 	"devDependencies": {
+		"@babel/core": "^7.17.8",
 		"@babel/eslint-parser": "^7.17.0",
+		"@babel/preset-env": "^7.16.11",
 		"@commitlint/cli": "^16.2.1",
 		"@commitlint/config-conventional": "^16.2.1",
 		"@release-it/bumper": "^3.0.1",
+		"babel-jest": "^27.5.1",
 		"conventional-changelog-chestnut": "^1.1.2",
 		"conventional-changelog-cli": "^2.2.2",
 		"cz-conventional-changelog": "^3.3.0",
@@ -33,6 +38,7 @@
 		"eslint-plugin-import": "^2.25.4",
 		"eslint-plugin-prettier": "^4.0.0",
 		"husky": "^7.0.4",
+		"jest": "^27.5.1",
 		"lint-staged": "^12.3.4",
 		"prettier": "^2.5.1",
 		"release-it": "^14.12.4"

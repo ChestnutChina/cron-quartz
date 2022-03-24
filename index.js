@@ -699,34 +699,4 @@ class Cron {
 
 }
 
-export function generateSpecific(start = 0, end = 0, type = 'number') {
-
-  const list = [];
-  while (start < end) {
-
-    if (type === 'string') {
-
-      if (start < 10) {
-
-        const str = '0' + start;
-        list.push(str);
-
-      } else {
-
-        list.push(start.toString());
-
-      }
-      start++;
-
-    } else {
-
-      list.push(++start);
-
-    }
-
-  }
-  return list;
-
-}
-
 export default Cron;
