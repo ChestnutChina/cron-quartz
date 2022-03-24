@@ -1,0 +1,17 @@
+{
+  "npm": false,
+  "git": {
+    "commitMessage": "chore: release v${version}"
+  },
+  "hooks": {
+    "after:bump": "npm run changelog",
+    "after:git:release": "echo Successfully git push to ${repo.remote}",
+    "after:release": "echo Successfully released ${name} v${version} to ${repo.repository}."
+  },
+  "plugins": {
+    "@release-it/bumper": {
+      "in": "package.json",
+      "out": "package.json"
+    }
+  }
+}

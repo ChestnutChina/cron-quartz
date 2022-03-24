@@ -1,0 +1,14 @@
+.husky/*
+.chestnutlogrc
+.czrc
+.editorconfig
+.eslintignore
+.gitignore
+.lintstagedrc
+.npmignore
+.prettierrc
+.release-it.json
+coverage/
+**/*.svg
+*.png
+*.jpg

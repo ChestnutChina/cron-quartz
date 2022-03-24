@@ -1,0 +1,20 @@
+{
+  "types": [
+    {
+      "type": "feat",
+      "alias": "Features"
+    },
+    {
+      "type": "fix",
+      "alias": "Bug Fixes"
+    },
+    {
+      "type": "style",
+      "alias": "Styles"
+    },
+    {
+      "type": "refactor",
+      "alias": "Code Refactoring"
+    }
+  ]
+}
