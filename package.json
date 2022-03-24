@@ -2,14 +2,6 @@
 	"name": "cron-quartz",
 	"version": "1.0.0",
 	"description": "generator quartz cron expressions",
-	"main": "index.js",
-	"scripts": {
-		"test": "jest --watch",
-    "coverage": "jest --coverage",
-		"lint": "eslint . --ext .js",
-		"release": "release-it",
-		"changelog": "conventional-changelog -p chestnut -i CHANGELOG.md -s -r 0"
-	},
 	"keywords": [
 		"cron",
 		"quartz",
@@ -19,6 +11,29 @@
 		"cron-expression",
 		"cron-generaor"
 	],
+	"main": "index.js",
+	"files": [
+		"index.js"
+	],
+	"scripts": {
+		"test": "jest --watch",
+		"coverage": "jest --coverage",
+		"lint": "eslint . --ext .js",
+		"release": "release-it",
+		"changelog": "conventional-changelog -p chestnut -i CHANGELOG.md -s -r 0"
+	},
+	"publishConfig": {
+		"registry": "https://registry.npmjs.org/",
+		"ignore-scripts": true,
+		"production": true
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ChestnutChina/cron-quartz.git"
+	},
+	"bugs": {
+		"url": "https://github.com/ChestnutChina/cron-quartz/issues"
+	},
 	"author": "bnuephjx",
 	"license": "MIT",
 	"devDependencies": {
@@ -37,6 +52,7 @@
 		"eslint-define-config": "^1.2.5",
 		"eslint-plugin-import": "^2.25.4",
 		"eslint-plugin-prettier": "^4.0.0",
+		"fs-extra": "^10.0.1",
 		"husky": "^7.0.4",
 		"jest": "^27.5.1",
 		"lint-staged": "^12.3.4",

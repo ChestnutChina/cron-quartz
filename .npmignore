@@ -1,0 +1,16 @@
+.git/
+node_modules/
+.vscode/
+.husky/
+.chestnutlogrc
+.czrc
+.editorconfig
+.eslintignore
+.eslintrc.js
+.gitignore
+.lintstagedrc
+.prettierignore
+.prettierrc
+.release-it.json
+commitlint.config.js
+optimize-package.js

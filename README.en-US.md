@@ -1,23 +1,24 @@
-[English](./README.en-US.md) | 简体中文
+English | [简体中文](./README.md)
+
 ## cron-quartz
 
-一个生成 `quartz` 对应 cron 表达式的库
+A library that generates `quartz` corresponding cron expressions
 ___
 
-## 安装
+## Install
 
 ``` bash
 npm install cron-quartz --save-dev
 ```
 ___
-## 使用方法
+## Usage
 
 ```
 import Cron from 'cron-quartz';
 
 const cron = new Cron();
 
-// 生成秒钟的表达式
+// generates an expression for seconds
 const result = cron.seconds({
   type: 'specific',
   list: [1, 2, 3],
@@ -26,27 +27,27 @@ const result = cron.seconds({
 console.log(result) // => '1,2,3 * * ? * * *'
 ```
 ___
-## 表达式校验
+## Expression Validate
 
-如果想对生成的表达式进行校验，可以下载`cron-expression-validator`这个库，具体的方法可以查看库的说明文档。
+To validate generated expressions, you can download the `cron-expression-validator` library. For details, see the library documentation.
 
-## 单元测试
+## Unit testing
 
-已通过单元测试
+Unit tests have been passed
 
 ![](./jest-unit.png)
 ## API
 
 #### `cron = new Cron()`
 
-创建一个 cron 表达式实例
+Create a cron expression instance
 
 #### `cron.seconds(opts)`
 
-生成`秒钟`对于表达式
+generates an expression for `seconds`
 
-* `opts.type`: 会有4种类型选择 `every` | `start` | `specific` | `between`
-* `opts.list`: 是一个数组类型，除了选择`every`，其它为必填项
+* `opts.type`: there are four types to choose from `every` | `start` | `specific` | `between`
+* `opts.list`: Is an array type. Everything except `every` is mandatory
 
 ``` javascript
 cron.seconds({ type: 'every' }) // => '* * * ? * * *'
@@ -60,10 +61,10 @@ cron.seconds({ type: 'between', list: [52, 20]}) // => '52-20 * * ? * * *'
 
 #### `cron.minutes(opts)`
 
-生成`分钟`对于表达式
+generates an expression for `minutes`
 
-* `opts.type`: 会有4种类型选择 `every` | `start` | `specific` | `between`
-* `opts.list`: 是一个数组类型，除了选择`every`，其它为必填项
+* `opts.type`: there are four types to choose from `every` | `start` | `specific` | `between`
+* `opts.list`: Is an array type. Everything except `every` is mandatory
 
 ``` javascript
 cron.minutes({ type: 'every' }) // => '* * * ? * * *'
@@ -77,10 +78,10 @@ cron.minutes({ type: 'between', list: [12, 32]}) // => '* 12-32 * ? * * *'
 
 #### `cron.hours(opts)`
 
-生成`小时`对于表达式
+generates an expression for `hours`
 
-* `opts.type`: 会有4种类型选择 `every` | `start` | `specific` | `between`
-* `opts.list`: 是一个数组类型，除了选择`every`，其它为必填项
+* `opts.type`: there are four types to choose from `every` | `start` | `specific` | `between`
+* `opts.list`: Is an array type. Everything except `every` is mandatory
 
 ``` javascript
 cron.hours({ type: 'every' }) // => '* * * ? * * *'
@@ -94,10 +95,10 @@ cron.hours({ type: 'between', list: [12, 23]}) // => '* * 12-23 ? * * *'
 
 #### `cron.days(opts)`
 
-生成`天`对于表达式
+generates an expression for `days`
 
-* `opts.type`: 会有11种类型选择 `every` | `start` | `startOnMonth` | `specific` | `specificOnMonth` | `lastDayOnMonth` | `lastWeekOnMonth` | `lastSelectDayOnMonth` | `before` | `near` | `dayOnEveryMonth`
-* `opts.list`: 是一个数组类型，除了选择`every` | `lastDayOnMonth` | `lastWeekOnMonth`，其它为必填项
+* `opts.type`: there are eleven types to choose from `every` | `start` | `startOnMonth` | `specific` | `specificOnMonth` | `lastDayOnMonth` | `lastWeekOnMonth` | `lastSelectDayOnMonth` | `before` | `near` | `dayOnEveryMonth`
+* `opts.list`: Is an array type. Everything except `every` | `lastDayOnMonth` | `lastWeekOnMonth` is mandatory
 
 ``` javascript
 cron.days({ type: 'every' }) // => '* * * ? * * *'
@@ -124,10 +125,10 @@ cron.days({ type: 'dayOnEveryMonth', list: [1, 5] }) // => '* * * ? * 1#5 *'
 ```
 #### `cron.months(opts)`
 
-生成`月`对于表达式
+generates an expression for `months`
 
-* `opts.type`: 会有4种类型选择 `every` | `start` | `specific` | `between`
-* `opts.list`: 是一个数组类型，除了选择`every`，其它为必填项
+* `opts.type`: there are eleven types to choose from `every` | `start` | `specific` | `between`
+* `opts.list`: Is an array type. Everything except `every` is mandatory
 
 ``` javascript
 cron.months({ type: 'every' }) // => '* * * ? * * *'
@@ -140,10 +141,10 @@ cron.months({ type: 'between', list: [12, 1]}) // => '* * * ? 12-1 * *'
 ```
 #### `cron.years(opts)`
 
-生成`年`对于表达式
+generates an expression for `years`
 
-* `opts.type`: 会有4种类型选择 `every` | `start` | `specific` | `between`
-* `opts.list`: 是一个数组类型，除了选择`every`，其它为必填项
+* `opts.type`: there are eleven types to choose from `every` | `start` | `specific` | `between`
+* `opts.list`: Is an array type. Everything except `every` is mandatory
 
 ``` javascript
 cron.years({ type: 'every' }) // => '* * * ? * * *'

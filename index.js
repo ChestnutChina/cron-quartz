@@ -37,13 +37,7 @@ class Cron {
     return this;
 
   }
-  spliceIntoPosition(position, char, str) {
-
-    if (typeof str === 'string') {
-
-      this.cron = str;
-
-    }
+  spliceIntoPosition(position, char) {
 
     let def = this.cron.split(' ');
     def.splice(position, 1, char);
