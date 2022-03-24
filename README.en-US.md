@@ -33,7 +33,10 @@ To validate generated expressions, you can download the `cron-expression-validat
 
 ## Unit testing
 
-Unit tests have been passed
+| Statements  | Branches | Functions | Lines  |
+| ----------- | -------- | --------- | ------ |
+|   100%      |  92.94%  |   100%    |  100%  |
+|   221/221   | 158/170  |   57/57   | 208/208|
 
 ![](./jest-unit.png)
 ## API
